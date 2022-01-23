@@ -36,12 +36,14 @@ router.post(
         await user.save();
 
         return res.json({
+          status: "success",
           msg: "New User Has Been Created..!",
         });
       }
 
       return res.json({
-        msg: "Email has been used..!",
+        status: "error",
+        msg: "Username has been used..!",
       });
     } catch (error) {
       return res.json({

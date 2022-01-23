@@ -20,6 +20,8 @@ app.use(
 );
 
 app.use("/user", require("./routes/user/"));
+app.use("/product", require("./routes/product"));
+app.use("/category", require("./routes/category"));
 
 http.listen(PORT, () => {
   console.log(`Backend is running on PORT ${PORT}`);
